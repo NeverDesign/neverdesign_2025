@@ -1,0 +1,81 @@
+/**
+ * Typography
+ */
+
+// TYPE ELEMENTS //
+.section {
+	.header {
+		display: inline-block;
+		margin-bottom: $space-xxl;
+
+		.title {
+			font-size: $h3-font-size;
+			font-family: $font-serif;
+			font-weight: 600;
+			margin-bottom: $space-xs;
+		}
+
+		.sub-title {
+			font-size: $h6-font-size;
+			text-transform: uppercase;
+			font-weight: 600;
+			margin-bottom: $space-xs;
+		}
+	}
+}
+
+// LISTS //
+.list-skills {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	list-style: none;
+	max-width: 95%;
+
+	li {
+		border-bottom: 1px dotted $gray-600;
+		display: flex;
+			justify-content: space-between;
+		padding-bottom: $space-sm;
+		margin-bottom: $space-sm;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	@include media-breakpoint-up(md){
+		max-width: none;
+		margin: 0 $space-xl 0 0;
+	}
+}
+
+// BADGES //
+.badge {
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+// HELPERS //
+
+// Text Colours - Shades
+.text-grey-darkest			{ color: $grey-darkest!important; }
+.text-grey-medium			{ color: $grey-medium!important; }
+.text-grey-light			{ color: $grey-light!important; }
+
+// Text Colours
+.text-primary, .text-red	{ color: $primary!important; }
+
+// BG Colours - Shades
+.bg-grey-darkest		{ background-color: $grey-darkest!important; }
+.bg-grey-medium			{ background-color: $grey-medium!important; }
+.bg-grey-light			{ background-color: $grey-light!important; }
+.bg-grey-lightest		{ background-color: $grey-lightest!important; }
+
+// BG Colours
+.bg-primary, .bg-red	{ background-color: $primary!important; }
+
+// Font Families
+.font-standard			{ font-family: $font-standard!important; }
+.font-serif				{ font-family: $font-serif!important; }
+.font-accent			{ font-family: $font-accent!important; }

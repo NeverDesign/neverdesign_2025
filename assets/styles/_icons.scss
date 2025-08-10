@@ -1,0 +1,104 @@
+// Icons.scss
+
+@font-face {
+    $version: 2;
+    $fontPath: '../fonts/icons-v#{$version}';
+    font-family: 'nd-icons';
+    font-display: swap;
+    src:	url('#{$fontPath}.eot?qrm12f');
+    src:	url('#{$fontPath}.eot?qrm12f#iefix') format('embedded-opentype'),
+    url('#{$fontPath}.ttf?qrm12f') format('truetype'),
+    url('#{$fontPath}.woff?qrm12f') format('woff'),
+    url('#{$fontPath}.svg?qrm12f#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    // use !important to prevent issues with browser extensions that change fonts
+    font-family: 'nd-icons' !important;
+    speak: none;
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: text-bottom;
+    position: relative;
+      top: -2px;
+
+    // Better Font Rendering
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-window:before,
+.icon-other:before {
+  content: "\e900";
+}
+.icon-cancel:before {
+  content: "\e901";
+}
+.icon-magnifier:before {
+  content: "\e902";
+}
+.icon-list:before {
+  content: "\e903";
+}
+.icon-tools:before,
+.icon-development:before {
+  content: "\e904";
+}
+.icon-brush:before,
+.icon-design:before, {
+  content: "\e905";
+}
+.icon-chat:before {
+  content: "\e906";
+}
+.icon-ruler:before {
+  content: "\e907";
+}
+.icon-star:before {
+  content: "\f005";
+}
+.icon-star-o:before {
+  content: "\f006";
+}
+.icon-linkedin-square:before {
+  content: "\f08c";
+}
+.icon-star-half-empty:before {
+  content: "\f123";
+}
+.icon-star-half-full:before {
+  content: "\f123";
+}
+.icon-star-half-o:before {
+  content: "\f123";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}
+.icon-git-square:before {
+  content: "\f1d2";
+}
+.icon-facebook-official:before {
+  content: "\f230";
+}
+.icon-cart:before {
+  content: "\e93a";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-mobile:before {
+  content: "\e958";
+}
+.icon-tablet:before {
+  content: "\e95a";
+}
+.icon-spinner2:before {
+  content: "\e97b";
+}

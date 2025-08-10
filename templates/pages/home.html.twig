@@ -1,0 +1,404 @@
+{# Page: Home #}
+{% extends 'base.html.twig' %}
+
+{% set projects = [
+	{
+		"title": "Homewood Health - Sentio",
+		"image": "/build/images/projects/sentio-3.png",
+		"description":
+			"As the understanding and importance of mental health continues to grow, the Homewood Health team approached us to help
+            design and build not only the public facing site for Sentio - an online tool to help improve mental health and tackle symptoms 
+            of depression but also the web applications for the client treatment portal and content publishing suite and a native mobile application. ",
+		"url": "https://sentioapp.com/",
+		"tasks": [
+			"UX", "Design", "HTML5", "SCSS", "CSS3", "JS", "jQuery", "AngularJS", "Twig", "Symfony", "ContentBuilderJS", "React Native"
+		]
+	},
+	{
+		"title": "Meticulon",
+		"image": "/build/images/projects/meticulon-2.png",
+		"description": "Working with the Meticulon team to create their Assessment portal has been an incredibly rewarding experience. This web
+                        application allows parents and mentors to help participants with Autism across Western Canada through their career
+                        by providing coaching through KPI's to improve their employ-ability.",
+		"url": "https://beta.meticulon-labs.com/login",
+		"tasks": [
+			"Concept Design", "Wire-framing", "Design", "UX", "HTML5", "SCSS", "CSS3", "jQuery", "AngularJS", "PHP", "Symfony", "Twig"
+		]
+	},
+	{
+		"title": "Soko Local",
+		"image": "/build/images/projects/soko-local.png",
+		"description":
+			"At MQLabs we try coming up with innovative and practical solutions to solve problems. In this case we
+			put our minds towards creating a search engine designed to promote and encourage shopping locally. The site
+			is fully responsive, accessible and fast. If you don't believe me, run a Lighthouse report on it :D",
+		"url": "#",
+		"tasks": [
+			"UX", "Design", "HTML5", "SCSS", "CSS3", "JS", "jQuery", "AngularJS", "Symfony", "Twig", "React Native"
+		]
+	},
+	{
+		"title": "MQ Labs",
+		"image": "/build/images/projects/mq-labs.png",
+		"description": "The MQLabs brand and site came to fruition in late 2020 when the team at MQ decided that it was
+						time to separate out the projects and ideas we came up with internally from the work we do for our
+						clients. I designed this single page site as a digital brochure to celebrate our success, creativity and diverse expertise.",
+		"url": "#",
+		"tasks": [
+			"Concept Design", "Branding", "HTML5", "SCSS", "CSS3", "jQuery"
+		]
+	},
+	{
+		"title": "JustPickup",
+		"image": "/build/images/projects/just-pickup.png",
+		"description": "When the world as we knew it changed in 2019 we put our heads together at MQLabs and thought how
+						can we empower businesses and individuals to operate in a safe, minimal contact and efficient manner.
+						The solution was JustPickup, a business and product directory with online product reservations and pick-up
+						scheduling.",
+		"url": "#",
+		"tasks": [
+			"Concept Design", "Wire-framing", "Design", "HTML5", "CSS3", "JS", "jQuery", "AngularJS", "Symfony", "Twig"
+		]
+	},
+	{
+		"title": "JustBeer",
+		"image": "/build/images/projects/just-beer.png",
+		"description": "An oldie but a goodie, and who doesn't love beer! JustBeer is an excellent example of an internal project
+						that a passionate small group of people including myself turned into a successful online community and resource
+						with a companion iPhone and Android app that challenge UX norms to provide the best experience for discovering
+						all things beer.",
+		"url": "#",
+		"tasks": [
+			"Concept Design", "Wire-framing", "Design", "HTML5", "CSS3", "JS", "jQuery", "AngularJS", "Symfony", "Twig", "React Native"
+		]
+	},
+] %}
+
+{% set clients = [
+	{
+		"label": "Homewood Health",
+		"image": "/build/images/clients/black/homewood-health.png",
+		"url": "",
+	},
+	{
+		"label": "Sentio",
+		"image": "/build/images/clients/black/sentio.png",
+		"url": "",
+	},
+	{
+		"label": "Mobility Quotient",
+		"image": "/build/images/clients/black/mq.png",
+		"url": "",
+	},
+	{
+		"label": "Winsight",
+		"image": "/build/images/clients/black/winsight.png",
+		"url": "",
+	},
+	{
+		"label": "Technomic",
+		"image": "/build/images/clients/black/technomic.png",
+		"url": "",
+	},
+	{
+		"label": "Meticulon",
+		"image": "/build/images/clients/black/meticulon.png",
+		"url": "",
+	},
+	{
+		"label": "Compliance Safe",
+		"image": "/build/images/clients/black/compliance-safe.png",
+		"url": "",
+	},
+	{
+		"label": "Patch",
+		"image": "/build/images/clients/black/patch.png",
+		"url": "",
+	},
+] %}
+
+{% block content %}
+	<section class="section section-hero" data-anchor="true">
+		<div class="hero-inner hero-inner-animation">
+			<div class="colour-band"></div>
+		</div>
+
+		<div class="hero-inner hero-inner-primary">
+			<div class="container width-narrow">
+				<h1 class="visually-hidden">Welcome to NeverDesign.net&mdash;The portfolio website of Jon De Araujo</h1>
+
+				<div class="title">
+					<div>
+						<span>Hi, my name is</span>
+						<b>Jon.</b>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="hero-inner hero-inner-secondary">
+		<div id="about"></div>
+			<div class="container width-narrow">
+				<div>
+					<span>I'm a</span>
+					<b>UX/UI Designer</b>
+				</div>
+				<div>
+					<span>and a</span>
+					<b>Front End Developer</b>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="section section-about" data-anchor="true">
+		<div class="section-inner container width-narrow text-center">
+			<div class="row">
+				<div class="col-12">
+					<div class="header">
+						<h2 class="title">I create imaginative, thoughtful and accessible digital experiences.</h2>
+					</div>
+					<div class="content">
+						<p>Hi, I’m Jon—Director Interactive at <a href="https://homewoodhealth.com" rel="noreferrer">Homewood Health</a>, design leader and relentless problem‑solver.
+						I lead a talented team of front‑end developers and designers, and collaborate closely with our mobile and internal platform teams to craft intuitive and accessible digital experiences. 
+						My background spans UX and UI design, web and mobile development, and team leadership. With 18 years industry experience, I’m just as comfortable refining a product vision as I am rolling up my sleeves to prototype or code. 
+						I believe in nurturing talent, fostering cross‑disciplinary collaboration, and turning complex challenges into elegant solutions that can be accessed by everyone.</p>
+					</div>
+
+					<div class="content about-more">
+						<p class="h5 text-center font-accent">My Role</p>
+						<p class="text-start">My day to day involves overseeing, managing and being involved in almost all UX/UI development across the company. I spend my time designing, developing and testing and when I'm not doing those I am helping my team succeed or interacting with clients.
+						I work closely with our marketing team and back end developer team to bring projects to life. The role is challenging and rewarding.</p>
+
+						<p class="h5 text-center font-accent">My accomplishments</p>
+						<div class="row text-start">
+							<div class="col-12 col-md-6">
+								<p>Currently, I'm proud to be building a platform and tools to help people with mental heatlh and wellness. I helped create a totally custom tool to help individuals and families with Autism lead successful lives and advance in their careers and personal goals. 
+								Building a custom learning management tool encouraged me to approach site design and integration differently. As a part of a multi-disciplinary team, I've brought custom solutions for industries ranging from automotive to food and beverage, document compliance to hyper-local news and even a local business search engine.</p>
+							</div>
+
+							<div class="col-12 col-md-6">
+								<p>In my current role I have brought about company wide change to implement and formalize the business processes involved in getting a project from concept to completion. I've been responsible for optimizing the tooling and 
+							development practices for front end, UX and UI development at the company. On top of this I have also been largely responsible for creating the front end infrastructure that allows MQ to successfully turn around custom systems for small, medium
+							and large scale projects.</p>
+							</div>
+						</div>
+
+						<p class="h5 text-center font-accent mt-2">Need more details?</p>
+						<p>Most of the work I do in my current role involves creating both public facing and protected experiences and given the nature of those projects and sensitivity of client data I'm not able to publish a folio of designs online. Please don't hesitate to <a href="#contact">say hello</a> for examples of work and more information.</p>
+					</div>
+
+					{# <div class="content">
+						<p><button class="btn btn-sm btn-secondary" role="button" onclick="UI.toggleMoreText(this);" data-target=".about-more" data-more="Current Role &amp; Accomplishments" data-less="Show Less">Current Role &amp; Accomplishments</button></p>
+					</div> #}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="folio" class="section section-folio" data-anchor="true">
+		<div class="section-inner">
+			<div class="text-center">
+				<div class="header">
+					<span class="pre-title">Check out</span>
+					<h2 class="title">some of my work</h2>
+				</div>
+			</div>
+
+			<div id="carousel-projects" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-indicators">
+					{% for item in projects %}
+					<button type="button" data-bs-target="#carousel-projects" data-bs-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active" aria-current="true"{% endif%} aria-label="{{ item.title }}"></button>
+					{% endfor %}
+				</div>
+				<div class="carousel-inner">
+					{% for item in projects %}
+					<div class="carousel-item item-project {{ loop.first ? 'active' : '' }}" >
+						<div class="item-inner row justify-content-center">
+							<div class="item-media col-12 col-md-6 col-lg">
+								<img src="{{ item.image }}" alt="{{ item.title }}" width="400" height="400" />
+							</div>
+							<div class="item-content col-12 col-sm-10 col-md-6 col-lg">
+								<h3 class="h2">{{ item.title }}</h3>
+
+								<p>{{ item.description }}</p>
+
+								{% if item.url != '#' %}
+								<p><a href="{{ item.url }}" class="btn btn-outline-primary-white" target="_blank" rel="noreferrer">Visit Site</a></p>
+								{% endif %}
+
+								<h4 class="h6 text-uppercase fw-bolder mt-4">Contributions</h4>
+								<p>
+									{% for task in item.tasks %}
+										<span class="badge bg-grey-lightest text-grey-darkest">{{ task }}</span>
+									{% endfor %}
+								</p>
+
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carousel-projects"  data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carousel-projects"  data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<section id="clients" class="section section-clients" data-anchor="true">
+		<div class="section-inner container width-standard">
+			<div class="text-center">
+				<div class="header">
+					<span class="pre-title">These are the</span>
+					<h2 class="title">organizations I've worked with</h2>
+				</div>
+			</div>
+
+			<div class="collection">
+				{% for item in clients %}
+				<div class="item item-logo">
+					<div class="item-inner">
+						<div class="item-media">
+							<img src="{{ item.image }}" alt="{{ item.label }}" width="200" height="90" />
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	<section id="skills" class="section section-skills" data-anchor="true">
+		<div class="section-inner container">
+			<div class="text-center">
+				<div class="header">
+					<h2 class="title">What I'm good at&hellip;</h2>
+				</div>
+			</div>
+
+			<div class="content row">
+				<div class="col-12 col-md-4">
+					<h3 class="h6 text-center text-uppercase">
+						<span class="icon icon-design text-red"></span>
+						Design
+					</h3>
+					<ul class="list-skills">
+						<li><p>Concept Design</p> <p>10<sub>/10</sub></p></li>
+						<li><p>Wire-framing</p> <p>10<sub>/10</sub></p></li>
+						<li><p>Design</p> <p>10<sub>/10</sub></p></li>
+						<li><p>Illustration</p> <p>10<sub>/10</sub></p></li>
+						<li><p>UX Mock-ups</p> <p>10<sub>/10</sub></p></li>
+						<li><p>Adobe PhotoShop</p> <p>9<sub>/10</sub></p></li>
+						<li><p>Adobe Illustrator</p> <p>9<sub>/10</sub></p></li>
+						<li><p>Adobe XD</p> <p>8<sub>/10</sub></p></li>
+						<li><p>Adobe InDesign</p> <p>8<sub>/10</sub></p></li>
+					</ul>
+				</div>
+
+				<div class="col-12 col-md-4">
+					<h3 class="h6 text-center text-uppercase">
+						<span class="icon icon-development text-red"></span>
+						Development
+					</h3>
+					<ul class="list-skills">
+						<li><p>HTML5</p> <p>10<sub>/10</sub></p></li>
+						<li><p>CSS3</p> <p>10<sub>/10</sub></p></li>
+						<li><p>SASS/SCSS/LESS</p> <p>10<sub>/10</sub></p></li>
+						<li><p>JS</p> <p>9<sub>/10</sub></p></li>
+						<li><p>Typescript</p> <p>7<sub>/10</sub></p></li>
+						<li><p>jQuery</p> <p>9<sub>/10</sub></p></li>
+						<li><p>Angular.js</p> <p>7<sub>/10</sub></p></li>
+						<li><p>React</p> <p>7<sub>/10</sub></p></li>
+						<li><p>PHP</p> <p>9<sub>/10</sub></p></li>
+						<li><p>Twig</p> <p>9<sub>/10</sub></p></li>
+						<li><p>Symfony</p> <p>8<sub>/10</sub></p></li>
+					</ul>
+				</div>
+
+				<div class="col-12 col-md-4">
+					<h3 class="h6 text-center text-uppercase">
+						<span class="icon icon-other text-red"></span>
+						Others
+					</h3>
+					<ul class="list-skills">
+						<li><p>Icon Fonts</p> <p>10<sub>/10</sub></p></li>
+						<li><p>Google Lighthouse</p> <p>9<sub>/10</sub></p></li>
+						<li><p>MacOS</p> <p>10<sub>/10</sub></p></li>
+						<li><p>Windows</p> <p>9<sub>/10</sub></p></li>
+						<li><p>Linux</p> <p>7<sub>/10</sub></p></li>
+						<li><p>Git/SVN</p> <p>9<sub>/10</sub></p></li>
+						<li><p>Codekit</p> <p>8<sub>/10</sub></p></li>
+						<li><p>SEO (OG, JSONLD, AMP)</p> <p>8<sub>/10</sub></p></li>
+						<li><p>DQL/SQL</p> <p>4<sub>/10</sub></p></li>
+						<li><p>CMS - WP, Bolt, Drupal</p> <p>7<sub>/10</sub></p></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact" class="section section-contact" data-anchor="true">
+		<div class="section-inner container width-narrow">
+			<div class="header">
+				<span class="pre-title">If you want to</span>
+				<h2 class="title">say hello</h2>
+			</div>
+
+			<div class="collection">
+				<div class="item item-social">
+					<div class="item-inner">
+						<a aria-label="Send a message" href="#" class="item-content" onclick="UI.sendMessage(); return false;">
+							<div class="wrapper-icon">
+								<span class="icon icon-chat fa-regular fa-envelope"></span>
+							</div>
+
+							<p>Send me an <b>email</b></p>
+						</a>
+					</div>
+				</div>
+
+				<div class="item item-social">
+					<div class="item-inner">
+						<a aria-label="LinkedIn" href="https://www.linkedin.com/in/jon-de-araujo-7a767241" rel="noreferrer" class="item-content" target="_blank">
+							<div class="wrapper-icon">
+								<span class="icon icon-linkedin-square fa-brands fa-linkedin"></span>
+							</div>
+
+							<p>Say hi on <b>LinkedIn</b></p>
+						</a>
+					</div>
+				</div>
+
+				<div class="item item-social">
+					<div class="item-inner">
+						<a aria-label="Github" href="https://instagram.com/refresh.ink" class="item-content" rel="noreferrer" target="_blank">
+							<div class="wrapper-icon">
+								<span class="icon icon-instagram fa-brands fa-instagram"></span>
+							</div>
+
+							<p>View <b>artwork</b></p>
+						</a>
+					</div>
+				</div>
+
+				{# <div class="item item-social">
+					<div class="item-inner">
+						<a aria-label="Github" href="https://github.com/neverdesign" class="item-content" rel="noreferrer" target="_blank">
+							<div class="wrapper-icon">
+								<span class="icon icon-git-square"></span>
+							</div>
+
+							<p>Check out my <b>repo</b></p>
+						</a>
+					</div>
+				</div> #}
+			</div>
+		</div>
+	</section>
+{% endblock content %}

@@ -1,0 +1,52 @@
+/**
+ * LAYOUT
+ */
+
+body {
+	min-width: 320px;
+	background: $black url('/assets/images/andrew-kliatskyi-jpu0gMXT9to-unsplash.jpg') no-repeat top center fixed;
+	background-size: cover;
+
+	&.menu-open {
+		position: fixed;
+		width: 100%;
+
+		#header {
+			bottom: 0;
+		}
+	}
+}
+
+// HEADER //
+#header {
+	position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 10;
+	background: transparentize($black, 0.2);
+	backdrop-filter: blur(3px);
+
+	.header-inner {
+		display: flex;
+			align-items: center;
+			justify-content: space-between;
+	}
+
+	.container-logo {
+		flex: 0 0 70px;
+	}
+
+	.container-nav {
+		flex: 0 1 auto;
+	}
+}
+
+// CONTAINERS //
+.container {
+	&.width-narrow {
+		@include media-breakpoint-up(md){
+			max-width: $container-width-narrow;
+		}
+	}
+}

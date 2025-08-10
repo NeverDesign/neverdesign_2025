@@ -1,0 +1,50 @@
+<heaeder id="header">
+    <div class="header-inner container">
+        <div class="container-logo">
+            <a href="/">
+                <picture class="logo">
+                    <source srcset="/build/images/logo.svg" type="image/svg">
+                    <img src="/build/images/logo.png" alt="NeverDesign" width="70" height="70" >
+                </picture>
+            </a>
+        </div>
+
+        <nav class="container-nav">
+            <a class="menu-toggle" href="#" onclick="UI.toggleMenu(this); return false;">
+                <span class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                Menu
+            </a>
+
+            <ul id="nav-primary" class="menu">
+                <li class="menu-item hidden-md-up">
+                    <a href="#" onclick="UI.scrollToTop(); UI.dismissMenu(); return false;">Home</a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#about" onclick="UI.dismissMenu();">About</a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#folio" onclick="UI.dismissMenu();">Folio</a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#skills" onclick="UI.dismissMenu();">Skills</a>
+                </li>
+
+                {# <li class="menu-item">
+                    <a href="/case-studies" onclick="UI.dismissMenu();">Case Studies</a>
+                </li> #}
+
+                <li class="menu-item">
+                    <a href="#contact" onclick="UI.dismissMenu();">Say Hello</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</heaeder>

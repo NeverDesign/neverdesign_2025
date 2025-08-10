@@ -1,0 +1,47 @@
+// Settings.scss
+
+// Shades
+$black:         #000000;
+$grey-darkest:	#141b22;
+$grey-medium:	#1b242e;
+$grey-light:	#323d48;
+$grey-lightest:	lighten($grey-light, 55%);
+$white:			#FFFFFF;
+$red:			#FD331C;
+$orange:        #fd531c;
+$indigo:         #5d1cfd;
+
+// Gradients
+$gradient-primary: linear-gradient(190deg, $orange 0%, $red 10%, $indigo 80%);
+
+// Colours
+$primary:		$red;
+$secondary:		$grey-medium;
+
+// Fonts
+$font-standard: 'Source Sans Pro', sans-serif;
+$font-serif:    'Source Serif Pro', serif;
+$font-accent:   $font-serif;
+
+// Spacing
+$space:			16px;
+$space-xs:		$space/4;		// 4px
+$space-sm:		$space/2;		// 8px
+$space-md:		$space*1.25;	// 20px
+$space-lg:		$space*1.5;		// 32px
+$space-xl:		$space*2;		// 48px
+$space-xxl:		$space*3.25;	// 64px
+$space-xxxl:	$space*4;		// 80px
+
+$container-width-narrow: 700px;
+
+/**
+ * Bootstrap Overrides
+ */
+$body-color:				$black;
+$body-bg:					$white;
+
+$font-family-base:			$font-standard;
+$font-weight-base:			300;
+
+$line-height-base:          1.8;
