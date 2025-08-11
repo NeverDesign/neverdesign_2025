@@ -18,4 +18,16 @@ final class SiteController extends AbstractController
 			return $this->render('pages/home.html.twig', $parameters);
 		}
 	}
+
+    #[Route('/case-studies/{slug}', name: 'case_studies', methods: ['GET'])]
+    public function caseStudiesAction(string $slug): Response
+    {
+        $parameters = array();
+        try {
+            $template = 'case-studies/' . $slug . '.html.twig';
+        }
+        finally {
+            return $this->render($template, $parameters);
+        }
+    }
 }
