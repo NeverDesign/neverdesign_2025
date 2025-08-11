@@ -103,3 +103,13 @@ DirectoryIndex index.php
 	“text/html” \
 	“text/javascript”
 </IfModule>
+
+# Secure Case Studies
+SetEnvIf Request_URI "^/case-studies(/|$)" PROTECT_CASE_STUDIES=1
+<If "%{ENV:PROTECT_CASE_STUDIES} == 1">
+  # Password
+    AuthType Basic
+    AuthName "Restricted Access"
+    AuthUserFile /home/neverdesign/neverdesign.net/.htpasswd
+    Require valid-user
+</If>

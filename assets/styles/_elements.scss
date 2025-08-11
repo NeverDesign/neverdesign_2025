@@ -176,14 +176,16 @@
 }
 
 .section-about {
+	$sectionBg: transparentize($grey-darkest, 0.2);
 	margin-top: 0;
 	padding: $space-xxl 0 $space-xxl;
-	background: $white;
+	background: $sectionBg;
+	color: $white;
 
 	$height: 35px;
 	&:before {
 		content: ' ';
-		background-image: linear-gradient(to left top, $white 0%, $white 50%, transparent 50%);
+		background-image: linear-gradient(to left top, $sectionBg 0%, $sectionBg 50%, transparent 50%);
 		width: 100%;
 		height: $height;
 		position: absolute;
@@ -193,7 +195,7 @@
 
 	&:after {
 		content: ' ';
-		background-image: linear-gradient(to left bottom, $white 0%, $white 49%, transparent 51%);
+		background-image: linear-gradient(to left bottom, $sectionBg 0%, $sectionBg 49%, transparent 51%);
 		width: 100%;
 		height: $height;
 		position: absolute;
@@ -252,10 +254,13 @@
 }
 
 .section-clients {
-	backdrop-filter: invert(1) blur(7px);
+	backdrop-filter: blur(7px);
+	color: $grey-lightest;
+
 	.collection {
 		justify-content: center;
 		align-items: center;
+		opacity: 0.8;
 	}
 }
 
@@ -265,12 +270,15 @@
 }
 
 .section-contact {
-	backdrop-filter: invert(1);
+	$sectionBg: transparentize($grey-darkest, 0.2);
+	background: $sectionBg;
+	backdrop-filter: blur(10px);
+	color: $white;
 	
 	&:before {
 		$height: 35px;
 		content: ' ';
-		background-image: linear-gradient(to left top, $white 0%, $white 49%, transparent 51%);
+		background-image: linear-gradient(to left top, $sectionBg 0%, $sectionBg 49%, transparent 51%);
 		width: 100%;
 		height: $height;
 		position: absolute;
@@ -391,7 +399,6 @@
 
 // FOOTER //
 footer {
-
 	.footer-inner {
 		margin-top: -$space-xxl;
 		padding-top: $space-xl;
@@ -399,7 +406,6 @@ footer {
 		text-align: center;
 		font-size: $font-size-sm;
 		color: $white;
-		border-top: 1px solid $grey-lightest;
 		max-width: 700px;
 	}
 
