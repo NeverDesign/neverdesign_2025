@@ -103,12 +103,3 @@ DirectoryIndex index.php
 	“text/html” \
 	“text/javascript”
 </IfModule>
-
-SetEnvIf Request_URI "^/case-studies(/|$)" PROTECT_CASE_STUDIES=1
-
-<If "%{ENV:PROTECT_CASE_STUDIES} == 1">
-  AuthType Basic
-  AuthName "Restricted"
-  AuthUserFile "/var/www/.htpasswd"
-  Require valid-user
-</If>
