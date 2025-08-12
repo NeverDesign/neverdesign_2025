@@ -4,18 +4,29 @@
 
 .page-case-study {
 	section:not(.section-hero) {
-		color: $grey-lightest;
+		color: $white;
 		padding-top: $space-xxl;
 		padding-bottom: $space-xxl;
 	}
 
 	.section-hero-case-study {
+		margin-bottom: 0;
+		.hero-inner-primary {
+			height: auto;
+			position: relative;
+		}
+
+		.hero-inner-animation {
+			bottom: 0;
+			background: linear-gradient(180deg, transparentize($black, 0.9) 0%, transparentize($grey-medium, 0.2));
+		}
+
 		.title {
 			font-weight: 600;
-			font-size: calc($h1-font-size * 1.5);
+			//font-size: calc($h1-font-size * 1.5);
 			line-height: 1.2;
 			
-			span {
+			span:not(.font-accent) {
 				display: block;
 				font-weight: 300;
 				font-size: $h4-font-size;
@@ -79,12 +90,33 @@
 		}
 	}
 
+	.container.case-study {
+		display: block;
+	}
+
+	.about-project {
+		background: transparentize($black, 0.2)
+	}
+
 	.impact-outcomes {
-		background: transparnetize($grey-medium, 0.5);
+		background: transparentize($grey-medium, 0.5);
 		backdrop-filter: blur(10px);
+	}
+
+	.role-contributions {
+		background: transparentize($grey-medium, 0.4);
+		backdrop-filter: blur(3px);
 	}
 }
 
 .page-case-study.sentio {
+	.section-hero {
+		.colour-band {
+			background: $gradient-homewood;
+		}
+	}
 
+	footer:before {
+		background: $gradient-homewood;
+	}
 }

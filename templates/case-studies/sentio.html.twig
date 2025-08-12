@@ -13,21 +13,25 @@
 		<div class="hero-inner hero-inner-primary">
 			<div class="container width-narrow">
 				<div class="row">
-					<h1 class="title col-12">
-						<span>Case study: </span>
-						Sentio
-					</h1>
+					<div class="col-text col-12 col-lg-6 d-lg-flex align-items-lg-center">
+						<h1 class="title">
+							<span>Case study: </span>
+							<span class="font-accent">Sentio</b>
+						</h1>
+					</div>
 
-					{# <div class="col-12 col-lg-8">
+					<div class="col-image col-12 col-lg-6 text-center">
 						<img src="/build/images/projects/sentio-3.png" alt="Sentio project collage" class="img-fluid" />
-					</div> #}
+					</div>
 				</div>
 			</div>
 		</div>
-		
+	</section>
+
+	<section class="section about-project">
 		<div class="hero-inner hero-inner-secondary">
 			<div class="container width-narrow case-study">
-				<h2 class="h3 text-center mt-4">The Project</h2>
+				<h2 class="h3 text-center">The Project</h2>
 				<p>
 					Sentio is an internet-based Cognitive Behavioural Therapy (iCBT) platform developed by Homewood Health to support individuals dealing with anxiety, depression, and related mental health conditions. 
 					The platform delivers evidence-based therapeutic content through interactive, multimedia modules and can be used either independently or with the support of a therapist or coach.
@@ -51,16 +55,19 @@
 						<li>Leading front-end development and collaborating closely with back-end engineers to maintain code quality and delivery cadence.</li>
 						<li>Overseeing UX and design refinement, including wireframes, flows, and final UI design for both web and (to a lesser extent) mobile.</li>
 						<li>Redesigning the clinical assessment flow to support both general (e.g. PHQ-2, GAD-2, PCL-2) and issue-specific tools (e.g. PHQ-9, GAD-7, PCL-5), surfacing results and personalized treatment recommendations.</li>
-						<li>Designing and building out native exercises and the internal publishing system that allows content teams to author complex therapeutic exercises involving:</li>
-						<li>Multiple input types (text, single/multi-choice)</li>
-						<li>Completion frequency rules</li>
-						<li>Conditional logic between questions</li>
-						<li>Notification management and reminders</li>
-						<li>Linking across exercises or prior responses</li>
+						<li>Designing and building out native exercises and the internal publishing system that allows content teams to author complex therapeutic exercises involving:
+							<ul class="mt-2">
+								<li>Multiple input types (text, single/multi-choice)</li>
+								<li>Completion frequency rules</li>
+								<li>Conditional logic between questions</li>
+								<li>Notification management and reminders</li>
+								<li>Linking across exercises or prior responses</li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 				<div class="col-12 col-md-5">
-					<figure>
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
 				 		<img class="img-fluid" src="/build/images/case-studies/sentio/ux-flow.png" alt="Sentio UX flow diagram" />
 						<figcaption>UX Flow Diagram</figcaption>
 					</figure>
@@ -101,21 +108,21 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col">
-					<figure>
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
 				 		<img class="img-fluid" src="/build/images/case-studies/sentio/general-assessment.png" alt="Assessment Template Image" />
 						<figcaption>Assessment Questionnaire</figcaption>
 					</figure>
 				</div>
 
 				<div class="col">
-					<figure>
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
 				 		<img class="img-fluid" src="/build/images/case-studies/sentio/program-results.png" alt="Sentio UX flow diagram" />
 						<figcaption>Assessment Results</figcaption>
 					</figure>
 				</div>
 
 				<div class="col">
-					<figure>
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
 				 		<img class="img-fluid" src="/build/images/case-studies/sentio/interactive-activity.png" alt="Sentio UX flow diagram" />
 						<figcaption>Interactive program exercise</figcaption>
 					</figure>
@@ -123,4 +130,7 @@
 			</div>
 		</div>
 	</section>
+
+	{# Preview Image Modal #}
+	{% include 'partials/image-preview.html.twig' %}
 {% endblock content %}

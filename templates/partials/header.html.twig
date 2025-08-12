@@ -22,19 +22,19 @@
 
             <ul id="nav-primary" class="menu">
                 <li class="menu-item hidden-md-up">
-                    <a href="#" onclick="UI.scrollToTop(); UI.dismissMenu(); return false;">Home</a>
+                    <a href="{{ path('home') }}" onclick="UI.scrollToTop(); UI.dismissMenu(); return false;">Home</a>
                 </li>
 
                 <li class="menu-item">
-                    <a href="#about" onclick="UI.dismissMenu();">About</a>
+                    <a href="{{ path('home') }}#about" onclick="UI.dismissMenu();">About</a>
                 </li>
 
                 <li class="menu-item">
-                    <a href="#folio" onclick="UI.dismissMenu();">Folio</a>
+                    <a href="{{ path('home') }}#folio" onclick="UI.dismissMenu();">Folio</a>
                 </li>
 
                 <li class="menu-item">
-                    <a href="#skills" onclick="UI.dismissMenu();">Skills</a>
+                    <a href="{{ path('home') }}#skills" onclick="UI.dismissMenu();">Skills</a>
                 </li>
 
                 {# <li class="menu-item">
@@ -42,7 +42,7 @@
                 </li> #}
 
                 <li class="menu-item">
-                    <a href="#contact" onclick="UI.dismissMenu();">Say Hello</a>
+                    <a href="{{ path('home') }}#contact" onclick="UI.dismissMenu();">Say Hello</a>
                 </li>
             </ul>
         </nav>
