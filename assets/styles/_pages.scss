@@ -1,0 +1,90 @@
+/*
+ * Pages
+ */
+
+.page-case-study {
+	section:not(.section-hero) {
+		color: $grey-lightest;
+		padding-top: $space-xxl;
+		padding-bottom: $space-xxl;
+	}
+
+	.section-hero-case-study {
+		.title {
+			font-weight: 600;
+			font-size: calc($h1-font-size * 1.5);
+			line-height: 1.2;
+			
+			span {
+				display: block;
+				font-weight: 300;
+				font-size: $h4-font-size;
+			}
+		}
+
+		@include media-breakpoint-up(md){
+			.container {
+				display: block;
+
+				p {
+					font-size: $h5-font-size;
+					padding: 0 $space-md;
+				}
+			}
+		}
+	}
+
+	.bg-img {
+		background-size: cover;
+		background-position: top center;
+		display: flex;
+			justify-content: center;;
+		min-height: 400px;
+		position: relative;
+		color: $white;
+
+		&:after {
+			display: block;
+			content: ' ';
+			position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 1;
+			backdrop-filter: blur(2px);
+			background: transparentize($black, 0.5);
+		}
+
+		.container {
+			background: transparentize($grey-darkest, 0.2);
+			backdrop-filter: blur(2px);
+			padding: $space-lg;
+			// margin-top: $space-xxl;
+			// margin-bottom: $space-xxl;
+			color: inherit;
+			position: relative;
+				z-index: 2;
+		}
+	}
+
+	ul {
+		line-height: 1.4;
+		li {
+			margin-bottom: $space-sm;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.impact-outcomes {
+		background: transparnetize($grey-medium, 0.5);
+		backdrop-filter: blur(10px);
+	}
+}
+
+.page-case-study.sentio {
+
+}

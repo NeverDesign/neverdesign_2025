@@ -1,23 +1,33 @@
 {# Page: Home #}
 {% extends 'base.html.twig' %}
 
+{# Intialise variables #}
+{% set bodyClass = 'page-case-study sentio' %}
+
 {% block content %}
-	<section class="section section-hero" data-anchor="true">
+	<section class="section section-hero section-hero-case-study" data-anchor="true">
 		<div class="hero-inner hero-inner-animation">
 			<div class="colour-band homewood"></div>
 		</div>
 
 		<div class="hero-inner hero-inner-primary">
 			<div class="container width-narrow">
-				<h1 class="title">
-					Case study: Sentio
-                </h1>
+				<div class="row">
+					<h1 class="title col-12">
+						<span>Case study: </span>
+						Sentio
+					</h1>
+
+					{# <div class="col-12 col-lg-8">
+						<img src="/build/images/projects/sentio-3.png" alt="Sentio project collage" class="img-fluid" />
+					</div> #}
+				</div>
 			</div>
 		</div>
 		
 		<div class="hero-inner hero-inner-secondary">
-		<div id="about"></div>
-			<div class="container width-narrow">
+			<div class="container width-narrow case-study">
+				<h2 class="h3 text-center mt-4">The Project</h2>
 				<p>
 					Sentio is an internet-based Cognitive Behavioural Therapy (iCBT) platform developed by Homewood Health to support individuals dealing with anxiety, depression, and related mental health conditions. 
 					The platform delivers evidence-based therapeutic content through interactive, multimedia modules and can be used either independently or with the support of a therapist or coach.
@@ -30,51 +40,87 @@
 		</div>
 	</section>
 
-	<section class="section-case-study">
-		<p class="h3">Role &amp; Contributions</p>
-		<p>I led the planning, management, and execution of the current Sentio rebuild, playing an essential cross-functional role across UX, design, technical architecture, and stakeholder alignment. Key contributions included:</p>
-		<ul>
-			<li>Managing timelines, stakeholder communications, and internal team deliverables.</li>
-			<li>Leading front-end development and collaborating closely with back-end engineers to maintain code quality and delivery cadence.</li>
-			<li>Overseeing UX and design refinement, including wireframes, flows, and final UI design for both web and (to a lesser extent) mobile.</li>
-			<li>Redesigning the clinical assessment flow to support both general (e.g. PHQ-2, GAD-2, PCL-2) and issue-specific tools (e.g. PHQ-9, GAD-7, PCL-5), surfacing results and personalized treatment recommendations.</li>
-			<li>Designing and building out native exercises and the internal publishing system that allows content teams to author complex therapeutic exercises involving:</li>
-			<li>Multiple input types (text, single/multi-choice)</li>
-			<li>Completion frequency rules</li>
-			<li>Conditional logic between questions</li>
-			<li>Notification management and reminders</li>
-			<li>Linking across exercises or prior responses</li>
-		</ul>
+	<section class="section-case-study role-contributions">
+		<div class="container width-wide">
+			<div class="row">
+				<div class="col-12 col-md-7">
+					<h3 class="h4">Role &amp; Contributions</h3>
+					<p>I led the planning, management, and execution of the current Sentio rebuild, playing an essential cross-functional role across UX, design, technical architecture, and stakeholder alignment. Key contributions included:</p>
+					<ul>
+						<li>Managing timelines, stakeholder communications, and internal team deliverables.</li>
+						<li>Leading front-end development and collaborating closely with back-end engineers to maintain code quality and delivery cadence.</li>
+						<li>Overseeing UX and design refinement, including wireframes, flows, and final UI design for both web and (to a lesser extent) mobile.</li>
+						<li>Redesigning the clinical assessment flow to support both general (e.g. PHQ-2, GAD-2, PCL-2) and issue-specific tools (e.g. PHQ-9, GAD-7, PCL-5), surfacing results and personalized treatment recommendations.</li>
+						<li>Designing and building out native exercises and the internal publishing system that allows content teams to author complex therapeutic exercises involving:</li>
+						<li>Multiple input types (text, single/multi-choice)</li>
+						<li>Completion frequency rules</li>
+						<li>Conditional logic between questions</li>
+						<li>Notification management and reminders</li>
+						<li>Linking across exercises or prior responses</li>
+					</ul>
+				</div>
+				<div class="col-12 col-md-5">
+					<figure>
+				 		<img class="img-fluid" src="/build/images/case-studies/sentio/ux-flow.png" alt="Sentio UX flow diagram" />
+						<figcaption>UX Flow Diagram</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</section>
 
-		<p class="h3">Key Challenges &amp; Considerations</p>
-		<ul>
-			<li>Crafting a UX that supports flexible but clinically sound workflows across three modes: self-directed, coach-assisted, and therapist-supported.</li>
-			<li>Orchestrating complex course flows that include consumable content (articles, videos, audio), downloadable PDFs, third-party integrations (e.g., Storyline), and native interactive exercises.</li>
-			<li>Balancing prefilled content, optional vs. required fields, and task dependencies — while protecting the therapeutic alliance and user agency.</li>
-			<li>Designing a scalable system for exercise authoring that content teams could own independently of dev teams.</li>
-			<li>Maintaining platform security, ongoing infrastructure updates, and stability while iterating rapidly.</li>
-		</ul>
+	<section class="section-case-study key-challenges bg-img" style="background-image: url('/build/images/case-studies/sentio/general-assessment-results.png');">
+		<div class="container width-narrow">
+			<p class="h3">Key Challenges &amp; Considerations</p>
+			<ul>
+				<li>Crafting a UX that supports flexible but clinically sound workflows across three modes: self-directed, coach-assisted, and therapist-supported.</li>
+				<li>Orchestrating complex course flows that include consumable content (articles, videos, audio), downloadable PDFs, third-party integrations (e.g., Storyline), and native interactive exercises.</li>
+				<li>Balancing prefilled content, optional vs. required fields, and task dependencies — while protecting the therapeutic alliance and user agency.</li>
+				<li>Designing a scalable system for exercise authoring that content teams could own independently of dev teams.</li>
+				<li>Maintaining platform security, ongoing infrastructure updates, and stability while iterating rapidly.</li>
+			</ul>
+		</div>
+	</section>
 
-		<p class="h3">Impact &amp; Outcomes</p>
-		<p>My leadership and hands-on contributions produced substantial improvements in platform capability, team efficiency, and user experience:</p>
-		<ul>
-			<li>Unified branding and component library across web and mobile created consistency with the wider Homewood product suite.</li>
-			<li>Improved publishing tools empowered the content and clinical teams to author and manage exercises independently.</li>
-			<li>Reduced dependency on third-party tools (like Storyline) by introducing flexible, in-house native exercises.</li>
-			<li>Guided experience design helped ensure users always had a next step — reducing friction and dead ends through tools, reminders, CTAs, and transitions.</li>
-			<li>Integrated ecosystem support allowed seamless movement between Sentio and other Homewood platforms like Homeweb.</li>
-			<li>Future-readiness: With a shared codebase and architecture, the rebuilt Sentio lays the groundwork for potential unification of EFAP and iCBT offerings — including possible expansion into self-funded access models, reducing reliance on benefit providers.</li>
-		</ul>
+	<section class="section-case-study impact-outcomes">
+		<div class="container width-narrow">
+			<p class="h3">Impact &amp; Outcomes</p>
+			<p>My leadership and hands-on contributions produced substantial improvements in platform capability, team efficiency, and user experience:</p>
+			<ul>
+				<li>Unified branding and component library across web and mobile created consistency with the wider Homewood product suite.</li>
+				<li>Improved publishing tools empowered the content and clinical teams to author and manage exercises independently.</li>
+				<li>Reduced dependency on third-party tools (like Storyline) by introducing flexible, in-house native exercises.</li>
+				<li>Guided experience design helped ensure users always had a next step — reducing friction and dead ends through tools, reminders, CTAs, and transitions.</li>
+				<li>Integrated ecosystem support allowed seamless movement between Sentio and other Homewood platforms like Homeweb.</li>
+				<li>Future-readiness: With a shared codebase and architecture, the rebuilt Sentio lays the groundwork for potential unification of EFAP and iCBT offerings — including possible expansion into self-funded access models, reducing reliance on benefit providers.</li>
+			</ul>
+		</div>
+	</section>
 
-		<p class="h3">Suggested Visual Assets</p>
-		<p>Please confirm which of these are available or can be created:</p>
-		<ul>
-			<li>Wireframe or flow diagram of the new assessment path</li>
-			<li>Screenshot of the treatment recommendations view</li>
-			<li>Admin interface or publishing tool UI for native exercises</li>
-			<li>Interactive module UI (single/multi-choice question view)</li>
-			<li>Mobile UI preview of course or mood tracking interface</li>
-			<li>UX journey map showing integration with Homeweb</li>
-		</ul>
+	<section class="section-case-study screenshots">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<figure>
+				 		<img class="img-fluid" src="/build/images/case-studies/sentio/general-assessment.png" alt="Assessment Template Image" />
+						<figcaption>Assessment Questionnaire</figcaption>
+					</figure>
+				</div>
+
+				<div class="col">
+					<figure>
+				 		<img class="img-fluid" src="/build/images/case-studies/sentio/program-results.png" alt="Sentio UX flow diagram" />
+						<figcaption>Assessment Results</figcaption>
+					</figure>
+				</div>
+
+				<div class="col">
+					<figure>
+				 		<img class="img-fluid" src="/build/images/case-studies/sentio/interactive-activity.png" alt="Sentio UX flow diagram" />
+						<figcaption>Interactive program exercise</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
 	</section>
 {% endblock content %}
