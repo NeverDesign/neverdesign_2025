@@ -28,7 +28,7 @@
 	padding: 0;
 
 	.hero-inner-animation {
-		background: transparentize($grey-medium, 0.5);
+		background: linear-gradient(180deg, transparentize($black, 0.9) 0%, transparentize($grey-medium, 0.2));
 		overflow: hidden;
 		position: absolute;
 			left: 0;
@@ -429,15 +429,30 @@
 
 // Preview Images
 .image-preview {
+	transition-duration: 0.2s;
 	img {
 		border: 3px solid transparent;
 	}
-	transition-duration: 0.2s;
+
+	figcaption {
+		text-align: center;
+		text-decoration: underline;
+	}
 
 	&:hover {
 		cursor: pointer;
 		img {
 			border-color: $link-hover-color;
+			-webkit-box-shadow: 5px 3px 3px 3px transparentize($red, 0.8),
+								-5px 3px 3px 3px transparentize($indigo, 0.8), 
+								-5px -3px 3px 3px transparentize($orange, 0.8), 
+								5px -3px 3px 3px transparentize($indigo, 0.8), 
+								5px 3px 3px 3px rgba(0,0,0,0); 
+			box-shadow: 5px 5px 3px 3px transparentize($red, 0.8),
+								-5px 3px 3px 3px transparentize($indigo, 0.8), 
+								-5px -3px 3px 3px transparentize($orange, 0.8), 
+								10px -3px 3px 3px transparentize($indigo, 0.8), 
+								5px 3px 3px 3px rgba(0,0,0,0);
 		}
 		transition-duration: 0.2s;
 
@@ -471,6 +486,14 @@ footer {
 		max-width: 700px;
 	}
 
+	.container-copyright {
+		& > * {
+			$bg: transparentize($black, 0.2);
+			background: $bg;
+			box-shadow: 0px 0px 0px 18px $bg;
+		}
+	}
+
 	@include media-breakpoint-up(md) {
 		.footer-inner {
 			margin-top: 0;
@@ -487,8 +510,26 @@ footer {
 	}
 }
 
+// Visibility Helpers //
 .hidden-md-up {
 	@include media-breakpoint-up(md){
 		display: none;;
+	}
+}
+
+// Badges //
+.tasks {
+	width: 100%;
+	display: flex;
+		flex-wrap: wrap;
+	line-height: 1.0!important;
+
+	.badge {
+		font-size: $font-size-sm!important;
+		font-family: $font-standard;
+		font-weight: 600!important;
+		margin-right: $space-xs;
+		margin-bottom: $space-xs;
+		display: inline-block!important;
 	}
 }

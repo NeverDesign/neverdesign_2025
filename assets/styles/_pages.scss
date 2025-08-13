@@ -23,7 +23,7 @@
 
 		.title {
 			font-weight: 600;
-			//font-size: calc($h1-font-size * 1.5);
+			font-size: calc($h3-font-size);
 			line-height: 1.2;
 			
 			span:not(.font-accent) {
@@ -31,6 +31,10 @@
 				font-weight: 300;
 				font-size: $h4-font-size;
 			}
+		}
+
+		.col-image {
+			margin-top: $space-xl;
 		}
 
 		@include media-breakpoint-up(md){
@@ -42,6 +46,20 @@
 					padding: 0 $space-md;
 				}
 			}
+
+			.col-text {
+				flex-wrap: wrap;
+			}
+		}
+
+		@include media-breakpoint-up(lg){
+			.col-text {
+				padding-top: $space-lg;
+			}
+
+			.col-image {
+				margin-top: 0;
+			}
 		}
 	}
 
@@ -49,7 +67,8 @@
 		background-size: cover;
 		background-position: top center;
 		display: flex;
-			justify-content: center;;
+			justify-content: center;
+			align-items: center;
 		min-height: 400px;
 		position: relative;
 		color: $white;
@@ -95,17 +114,22 @@
 	}
 
 	.about-project {
-		background: transparentize($black, 0.2)
+		background: transparentize($black, 0.1)
 	}
 
 	.impact-outcomes {
-		background: transparentize($grey-medium, 0.5);
-		backdrop-filter: blur(10px);
+		background: transparentize($grey-medium, 0.4);
+		backdrop-filter: blur(6px);
 	}
 
 	.role-contributions {
 		background: transparentize($grey-medium, 0.4);
 		backdrop-filter: blur(3px);
+	}
+
+	.screenshots {
+		background: transparentize($grey-darkest,0.3);
+		backdrop-filter: blur(15px);
 	}
 }
 

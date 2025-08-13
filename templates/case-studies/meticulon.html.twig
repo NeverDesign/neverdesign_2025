@@ -1,6 +1,22 @@
 {# Page: Home #}
 {% extends 'base.html.twig' %}
 
+{# Initialize Variables #}
+{% set bodyClass = 'page-case-study meticulon' %}
+{% set item = {
+		"title": "Meticulon",
+		"image": "/build/images/projects/meticulon-2.png",
+		"description": "Working with the Meticulon team to create their Assessment portal has been an incredibly rewarding experience. This web
+						application allows parents and mentors to help participants with Autism across Western Canada through their career
+						by providing coaching through KPI's to improve their employ-ability.",
+		"url": "https://beta.meticulon-labs.com/login",
+		"caseStudyPath": path('case_studies', {'slug': 'meticulon'}),
+		"tasks": [
+			"Concept Design", "Wire-framing", "Design", "UX", "HTML5", "SCSS", "CSS3", "jQuery", "VueJS", "PHP", "Symfony", "Twig"
+		]
+	}
+%}
+
 {% block content %}
 	<section class="section section-hero" data-anchor="true">
 		<div class="hero-inner hero-inner-animation">

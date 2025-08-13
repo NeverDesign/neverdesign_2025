@@ -2,7 +2,20 @@
 {% extends 'base.html.twig' %}
 
 {# Initialize variables #}
-{% set bodyClass = 'page-case-study homeweb' %}
+{% set bodyClass = 'page-case-study hoeweb' %}
+{% set item = {
+		"title": "Homewood Health - Homeweb",
+		"image": "/build/images/projects/homeweb-3.png",
+		"description":
+			"Homeweb - a digital mental health and wellness platform developed by Homewood Health, is designed to support users with a broad range of emotional, psychological, and life challenges. 
+			It's's available to individuals through their Employee and Family Assistance Program (EFAP) or other organizational wellness plans and provides secure, confidential access to services and self-guided resources on demand.",
+		"url": "https://homewoodpathfinder.com/",
+		"caseStudyPath": path('case_studies', {'slug': 'homeweb'}),
+		"tasks": [
+			"UX", "Design", "HTML5", "SCSS", "CSS3", "JS", "jQuery", "VueJS", "Twig", "Symfony", "PHP", "ContentBuilderJS", "React Native"
+		]
+	}
+%}
 
 {% block content %}
 	<section class="section section-hero section-hero-case-study" data-anchor="true">
@@ -13,15 +26,21 @@
 		<div class="hero-inner hero-inner-primary">
 			<div class="container width-narrow">
 				<div class="row">
-					<div class="col-text col-12 col-lg-6 d-lg-flex align-items-lg-centee">
+					<div class="col-text col-12 col-lg-6">
 						<h1 class="title">
-							<span>Case study:</span>
+							<span>Case study: </span>
 							<span class="font-accent">Homeweb</span>
 						</h1>
+						<div class="tasks">
+							{% for task in item.tasks %}
+								<span class="badge bg-grey-lightest text-grey-darkest">{{ task }}</span>
+							{% endfor %}
+						</div>
 					</div>
-				</div>
-				<div class="col-image col-12 col-lg-6 text-center">
 
+					<div class="col-image col-12 col-lg-6 text-center">
+						<img src="{{ item.image }}" alt="{{ item.title }} project collage" class="img-fluid" />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -29,8 +48,8 @@
 		
 	<section class="section about-project">
 		<div class="hero-inner hero-inner-secondary">
-			<div class="container width-narrow case-study">
-				<h2 class="h3 text-center">The Project</h2>
+			<div class="container case-study">
+				<h2 class="h3 font-accent text-center">The Project</h2>
 				<p>
 					Homeweb is a secure digital mental health platform developed by Homewood Health, providing 24/7 confidential access to counselling, self-guided wellness tools, iCBT programs, and crisis support. 
 					It is tailored to users enrolled in Employee and Family Assistance Programs (EFAPs) and integrates proprietary technologies like the Pathfinder™ clinical assessment engine and Sentio™ iCBT to deliver personalized care. 
@@ -44,7 +63,7 @@
 		<div class="container width-wide">
 			<div class="row">
 				<div class="col-12 col-md-7">
-					<h3 class="h4">Role &amp; Contributions</h3>
+					<h3 class="h4 font-accent">Role &amp; Contributions</h3>
 					<p>As the technical lead for the front-end team and a key contributor to UX strategy, I played a pivotal role in designing and refining the third and current major version of Homeweb. My contributions included:</p>
 					<ul>
 						<li>Leading the front-end development team.</li>
@@ -60,16 +79,19 @@
 					</ul>
 				</div>
 				<div class="col-12 col-md-5">
-
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
+				 		<img class="img-fluid" src="/build/images/case-studies/homeweb/homeweb-booking-flow.png" alt="Direct access to booking" />
+						<figcaption>Booking flow refinements</figcaption>
+					</figure>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="section-case-study key-challenges bg-img">
+	<section class="section-case-study key-challenges bg-img" style="background-image: url('/build/images/case-studies/homeweb/meetnow-flow-composite.png')">
 		<div class="container with-narrow">
-			<p class="h3">Key Challenges &amp; Considerations</p>
-			<ul>
+			<h3 class="h4 font-accent">Key Challenges &amp; Considerations</h3>
+			<ul class="mb-0">
 				<li>Balancing clinical safety and academic tools with accessible, user-friendly UX.</li>
 				<li>Integrating complex services and modalities (e.g., counselling, content, iCBT, assessments) into a cohesive interface.</li>
 				<li>Ensuring compatibility and a seamless experience across browsers, devices, and assistive tech.</li>
@@ -79,9 +101,36 @@
 		</div>
 	</section>
 
-	<sectiion class="section-case-study impact-outcomes">
+	<section class="section-case-study screenshots">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
+				 		<img class="img-fluid" src="/build/images/case-studies/homeweb/homeweb-dashboard.png" alt="Homeweb Dashboard" />
+						<figcaption>Dashboard: Improved UX and UI</figcaption>
+					</figure>
+				</div>
+
+				<div class="col">
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
+				 		<img class="img-fluid" src="/build/images/case-studies/homeweb/booking-before-after.png" alt="Homeweb Booking before and after" />
+						<figcaption>Booking: UX before and after</figcaption>
+					</figure>
+				</div>
+
+				<div class="col">
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
+				 		<img class="img-fluid" src="/build/images/case-studies/homeweb/UX-UI-mockups.png" alt="Homeweb Wireframes and mockups" />
+						<figcaption>UX/UI design and prototype</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-case-study impact-outcomes">
 		<div class="container width-narrow">
-			<p class="h3">Impact &amp; Outcomes</p>
+			<h3 class="h4 font-accent">Impact &amp; Outcomes</h3>
 			<p>My work led to major improvements in the platform’s reliability, accessibility, and scalability:</p>
 			<ul>
 				<li>Platform stability &amp; uptime: reduced critical errors and dramatically improved site reliability.</li>
@@ -94,6 +143,8 @@
 			</ul>
 		</div>
 	</section>
+
+	
 
 	{# Preview Image Modal #}
 	{% include 'partials/image-preview.html.twig' %}

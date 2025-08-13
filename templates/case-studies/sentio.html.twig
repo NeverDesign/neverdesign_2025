@@ -3,6 +3,20 @@
 
 {# Intialise variables #}
 {% set bodyClass = 'page-case-study sentio' %}
+{% set item = {
+		"title": "Homewood Health - Sentio",
+		"image": "/build/images/projects/sentio-3.png",
+		"description":
+			"As the understanding and importance of mental health continues to grow, the Homewood Health team approached us to help
+			design and build not only the public facing site for Sentio - an online tool to help improve mental health and tackle symptoms 
+			of depression but also the web applications for the client treatment portal and content publishing suite and a native mobile application. ",
+		"url": "https://sentioapp.com/",
+		"caseStudyPath": path('case_studies', {'slug': 'sentio'}),
+		"tasks": [
+			"UX", "Design", "HTML5", "SCSS", "CSS3", "JS", "jQuery", "VueJS", "Twig", "Symfony",  "PHP","ContentBuilderJS", "React Native"
+		]
+	} 
+%}
 
 {% block content %}
 	<section class="section section-hero section-hero-case-study" data-anchor="true">
@@ -13,15 +27,20 @@
 		<div class="hero-inner hero-inner-primary">
 			<div class="container width-narrow">
 				<div class="row">
-					<div class="col-text col-12 col-lg-6 d-lg-flex align-items-lg-center">
+					<div class="col-text col-12 col-lg-6">
 						<h1 class="title">
 							<span>Case study: </span>
 							<span class="font-accent">Sentio</b>
 						</h1>
+						<div class="tasks">
+							{% for task in item.tasks %}
+								<span class="badge bg-grey-lightest text-grey-darkest">{{ task }}</span>
+							{% endfor %}
+						</div>
 					</div>
 
 					<div class="col-image col-12 col-lg-6 text-center">
-						<img src="/build/images/projects/sentio-3.png" alt="Sentio project collage" class="img-fluid" />
+						<img src="{{ item.image }}" alt="{{ item.title }} project collage" class="img-fluid" />
 					</div>
 				</div>
 			</div>
@@ -30,8 +49,8 @@
 
 	<section class="section about-project">
 		<div class="hero-inner hero-inner-secondary">
-			<div class="container width-narrow case-study">
-				<h2 class="h3 text-center">The Project</h2>
+			<div class="container case-study">
+				<h2 class="h3 font-accent text-center">The Project</h2>
 				<p>
 					Sentio is an internet-based Cognitive Behavioural Therapy (iCBT) platform developed by Homewood Health to support individuals dealing with anxiety, depression, and related mental health conditions. 
 					The platform delivers evidence-based therapeutic content through interactive, multimedia modules and can be used either independently or with the support of a therapist or coach.
@@ -48,7 +67,7 @@
 		<div class="container width-wide">
 			<div class="row">
 				<div class="col-12 col-md-7">
-					<h3 class="h4">Role &amp; Contributions</h3>
+					<h3 class="h4 font-accent">Role &amp; Contributions</h3>
 					<p>I led the planning, management, and execution of the current Sentio rebuild, playing an essential cross-functional role across UX, design, technical architecture, and stakeholder alignment. Key contributions included:</p>
 					<ul>
 						<li>Managing timelines, stakeholder communications, and internal team deliverables.</li>
@@ -78,8 +97,8 @@
 
 	<section class="section-case-study key-challenges bg-img" style="background-image: url('/build/images/case-studies/sentio/general-assessment-results.png');">
 		<div class="container width-narrow">
-			<p class="h3">Key Challenges &amp; Considerations</p>
-			<ul>
+			<h3 class="h4 font-accent">Key Challenges &amp; Considerations</h3>
+			<ul class="mb-0">
 				<li>Crafting a UX that supports flexible but clinically sound workflows across three modes: self-directed, coach-assisted, and therapist-supported.</li>
 				<li>Orchestrating complex course flows that include consumable content (articles, videos, audio), downloadable PDFs, third-party integrations (e.g., Storyline), and native interactive exercises.</li>
 				<li>Balancing prefilled content, optional vs. required fields, and task dependencies — while protecting the therapeutic alliance and user agency.</li>
@@ -91,7 +110,7 @@
 
 	<section class="section-case-study impact-outcomes">
 		<div class="container width-narrow">
-			<p class="h3">Impact &amp; Outcomes</p>
+			<h3 class="h4 font-accent">Impact &amp; Outcomes</h3>
 			<p>My leadership and hands-on contributions produced substantial improvements in platform capability, team efficiency, and user experience:</p>
 			<ul>
 				<li>Unified branding and component library across web and mobile created consistency with the wider Homewood product suite.</li>
