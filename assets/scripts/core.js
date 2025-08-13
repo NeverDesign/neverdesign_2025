@@ -66,7 +66,7 @@ let UI = {
 	loadPreviewImage: function ( element ){
 		let figureElement = $(element).clone();
 		let modal = $('#previewImage');
-		let image = figureElement.children('img');
+		let image = figureElement.find('img');
 
 		log('figureElement', figureElement);
 		log('image', image);

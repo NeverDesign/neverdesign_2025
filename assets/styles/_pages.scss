@@ -133,7 +133,8 @@
 	}
 }
 
-.page-case-study.sentio {
+.page-case-study.sentio
+.page-case-study.homeweb {
 	.section-hero {
 		.colour-band {
 			background: $gradient-homewood;
@@ -142,5 +143,17 @@
 
 	footer:before {
 		background: $gradient-homewood;
+	}
+}
+
+.page-case-study.meticulon {
+	.section-hero {
+		.colour-band {
+			background: $gradient-meticulon;
+		}
+	}
+
+	footer:before {
+		background: $gradient-meticulon;
 	}
 }

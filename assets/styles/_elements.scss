@@ -126,8 +126,9 @@
 		// }
 
 		&:after {
+			$bg: transparentize($black, 0.2);
 			content: ' ';
-			background-image: linear-gradient(to right bottom, $black 0%, $black 49%, transparent 51%);
+			background-image: linear-gradient(to right bottom, $bg 0%, $bg 49%, transparent 51%);
 			width: 100%;
 			height: $height;
 			position: absolute;
@@ -430,7 +431,8 @@
 // Preview Images
 .image-preview {
 	transition-duration: 0.2s;
-	img {
+
+	.media {
 		border: 3px solid transparent;
 	}
 
@@ -439,9 +441,23 @@
 		text-decoration: underline;
 	}
 
+	.square {
+		width: 100%;
+		aspect-ratio: 1/1;
+		// object-fit: cover;
+		overflow: hidden;
+
+		img {
+			width: auto;
+			min-height: 100%;
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+
 	&:hover {
 		cursor: pointer;
-		img {
+		.media {
 			border-color: $link-hover-color;
 			-webkit-box-shadow: 5px 3px 3px 3px transparentize($red, 0.8),
 								-5px 3px 3px 3px transparentize($indigo, 0.8), 

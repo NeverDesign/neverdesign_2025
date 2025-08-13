@@ -18,22 +18,38 @@
 %}
 
 {% block content %}
-	<section class="section section-hero" data-anchor="true">
+	<section class="section section-hero section-hero-case-study" data-anchor="true">
 		<div class="hero-inner hero-inner-animation">
 			<div class="colour-band meticulon"></div>
 		</div>
 
 		<div class="hero-inner hero-inner-primary">
 			<div class="container width-narrow">
-				<h1 class="title">
-					Case study: Meticulon Assessment Service
-				</h1>
+				<div class="row">
+					<div class="col-text col-12 col-lg-6">
+						<h1 class="title">
+							<span>Case study: </span>
+							<span class="font-accent">Meticulon</span>
+						</h1>
+						<div class="tasks">
+							{% for task in item.tasks %}
+								<span class="badge bg-grey-lightest text-grey-darkest">{{ task }}</span>
+							{% endfor %}
+						</div>
+					</div>
+
+					<div class="col-image col-12 col-lg-6 text-center">
+						<img src="{{ item.image }}" alt="{{ item.title }} project collage" class="img-fluid" />
+					</div>
+				</div>
 			</div>
 		</div>
+	</section>
 		
+	<section class="section about-project">
 		<div class="hero-inner hero-inner-secondary">
-		<div id="about"></div>
-			<div class="container width-narrow">
+			<div class="container case-study">
+				<h2 class="h3 font-accent text-center">The Project</h2>
 				<p>
 					The Meticulon Assessment Service (MAS) is a digital platform designed to assess the employment readiness of neurodiverse individuals—particularly those on the autism spectrum—using a strength-based approach. 
 					Built in collaboration with Meticulon, a Canadian social enterprise, the MAS platform helps participants, educators, and job coaches evaluate individual skills across 12 employer-informed categories such as perseverance, communication, and teamwork.
@@ -45,37 +61,132 @@
 		</div>
 	</section>
 
-	<section class="section-case-study">
-		<p class="h3">Role &amp; Contributions</p>
-		<p>I led the UX and UI design and implementation for both version 2 and version 3 (the current production version) of the MAS platform. My work spanned early-stage product strategy through to front-end development and partner enablement. Key contributions included:</p>
-		<ul>
-			<li>Collaborating directly with Meticulon stakeholders to define the platform’s scope, functionality, and outcome goals.</li>
-			<li>Designing all aspects of the product experience — from wireframes and user flows to high-fidelity visual designs.</li>
-			<li>Implementing the web application’s interface with an emphasis on flexibility, accessibility, and performance.</li>
-			<li>Supporting staff training and developing user-facing documentation.</li>
-			<li>Working closely with back-end developers to:</li>
-			<li>Architect the platform for multi-tenant use.</li>
-			<li>Enable seamless white labelling, allowing Meticulon to license the software to other organizations.</li>
-		</ul>
+	<section class="section-case-study role-contributions">
+		<div class="container width-narrow">
+			<h3 class="h4 font-accent">Role &amp; Contributions</h3>
+			<p>I led the UX and UI design and implementation for both version 2 and version 3 (the current production version) of the MAS platform. My work spanned early-stage product strategy through to front-end development and partner enablement. Key contributions included:</p>
+			<ul>
+				<li>Collaborating directly with Meticulon stakeholders to define the platform’s scope, functionality, and outcome goals.</li>
+				<li>Designing all aspects of the product experience — from wireframes and user flows to high-fidelity visual designs.</li>
+				<li>Implementing the web application’s interface with an emphasis on flexibility, accessibility, and performance.</li>
+				<li>Supporting staff training and developing user-facing documentation.</li>
+				<li>Working closely with back-end developers to:</li>
+				<li>Architect the platform for multi-tenant use.</li>
+				<li>Enable seamless white labelling, allowing Meticulon to license the software to other organizations.</li>
+			</ul>
+		</div>
+	</section>
 
-		<p class="h3">Key Challenges &amp; Considerations</p>
-		<ul>
-			<li>Designing for diverse audiences — including neurodivergent participants, family members, employment coaches, educators, and employers — all with differing accessibility and usability needs.</li>
-			<li>Supporting a broad range of devices and input methods, including mobile browsers, desktops, and assistive technologies.</li>
-			<li>Ensuring the interface was intuitive, dignified, and strength-based, avoiding clinical or deficit-focused language.</li>
-			<li>Creating a UI flexible enough to be easily customized and rebranded by client organizations.</li>
-			<li>Implementing a system that maintains user privacy while enabling aggregate tracking and reporting across roles.</li>
-		</ul>
+	<section class="section-case-study screenshots">
+		<div class="container">
+			<h3 class="h4 text-center font-accent">UX Workflow</h3>
+			<div class="row">
+				<div class="col">
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
+						<div class="media square">
+							<img class="img-fluid" src="/build/images/case-studies/meticulon/MAS-UX_notebook.png" alt="MAS Sketches" />
+						</div>
+						<figcaption>Step 1: Plan and sketch on paper</figcaption>
+					</figure>
+				</div>
 
-		<p class="h3">Impact &amp; Outcomes</p>
-		<p>My work on the MAS platform directly enabled and influenced all reported program outcomes:</p>
-		<ul>
-			<li>90% of MAS participants continued to employment training or academic pathways.</li>
-			<li>Over 50% of employed participants retained long-term positions.</li>
-			<li>One-third of participants secured employment within six months of completing the MAS program.</li>
-			<li>Created a tool that supports coaches and families in tailoring readiness strategies to individual strengths.</li>
-			<li>Enabled Meticulon to expand their impact and commercialize the product as a licensed, white-labeled offering.</li>
-		</ul>
+				<div class="col">
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
+						<div class="media square">
+							<img class="img-fluid" src="/build/images/case-studies/meticulon/MAS-UX_Sketches.png" alt="Sketches turned into UX Diagram" />
+						</div>
+						<figcaption>Step 2: Create UX flow</figcaption>
+					</figure>
+				</div>
+
+				<div class="col">
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
+						<div class="media square">
+				 			<img class="img-fluid" src="/build/images/case-studies/meticulon/MAS-UX_flow.png" alt="MAS design and prototype" />
+						</div>
+						<figcaption>Step 3: High high-fidelity mock-up and UX prototype</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-case-study key-challenges bg-img" style="background-image: url('/build/images/case-studies/meticulon/MAS-UX_flow.png')">
+		<div class="container with-narrow">
+			<h3 class="h4 font-accent">Key Challenges &amp; Considerations</h3>
+			<ul>
+				<li>Designing for diverse audiences — including neurodivergent participants, family members, employment coaches, educators, and employers — all with differing accessibility and usability needs.</li>
+				<li>Supporting a broad range of devices and input methods, including mobile browsers, desktops, and assistive technologies.</li>
+				<li>Ensuring the interface was intuitive, dignified, and strength-based, avoiding clinical or deficit-focused language.</li>
+				<li>Creating a UI flexible enough to be easily customized and rebranded by client organizations.</li>
+				<li>Implementing a system that maintains user privacy while enabling aggregate tracking and reporting across roles.</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="section-case-study impact-outcomes">
+		<div class="container width-narrow">
+			<h3 class="h4 font-accent">Impact &amp; Outcomes</h3>
+			<p>My work on the MAS platform directly enabled and influenced all reported program outcomes:</p>
+			<ul>
+				<li>90% of MAS participants continued to employment training or academic pathways.</li>
+				<li>Over 50% of employed participants retained long-term positions.</li>
+				<li>One-third of participants secured employment within six months of completing the MAS program.</li>
+				<li>Created a tool that supports coaches and families in tailoring readiness strategies to individual strengths.</li>
+				<li>Enabled Meticulon to expand their impact and commercialize the product as a licensed, white-labeled offering.</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="section-case-study screenshots">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
+						<div class="media square">
+							<img class="img-fluid" src="/build/images/case-studies/meticulon/log-in.png" alt="Log In Page" />
+						</div>
+						<figcaption>Log in and Registration</figcaption>
+					</figure>
+				</div>
+
+				<div class="col">
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
+						<div class="media square">
+							<img class="img-fluid" src="/build/images/case-studies/meticulon/participant.png" alt="Participant dashboard" />
+						</div>
+						<figcaption>Participant Dashboard</figcaption>
+					</figure>
+				</div>
+
+				<div class="col">
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
+						<div class="media square">
+				 			<img class="img-fluid" src="/build/images/case-studies/meticulon/print-skills.png" alt="Participant skills print view" />
+						</div>
+						<figcaption>Participant skills - Print view</figcaption>
+					</figure>
+				</div>
+
+				<div class="col">
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
+						<div class="media square">
+				 			<img class="img-fluid" src="/build/images/case-studies/meticulon/messages.png" alt="Messages and chat" />
+						</div>
+						<figcaption>Messages and chat interface</figcaption>
+					</figure>
+				</div>
+				
+				<div class="col">
+					<figure class="image-preview" data-bs-toggle="modal" data-bs-target="#previewImage" onclick="UI.loadPreviewImage(this);">
+						<div class="media square">
+				 			<img class="img-fluid" src="/build/images/case-studies/meticulon/participant-manager.png" alt="Participant management" />
+						</div>
+						<figcaption>Participant Manager</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	{# Preview Image Modal #}
